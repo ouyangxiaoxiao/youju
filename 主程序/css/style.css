@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: rgba(39, 35, 35, 0.83);
+    text-decoration:none ;
+}
+header {
+    height: 45px;
+    /*padding-left: 65px;*/
+    background-color: rgba(111, 225, 86, 0.64);
+    line-height: 45px;
+    color: rgba(39, 35, 35, 0.83);
+    text-shadow: 5px 5px 5px rgba(255, 0, 25, 0.35);
+}
+
+div {
+    position: relative;
+
+}
+
+
+ul {
+    list-style: none;
+}
+
+.a {
+    color: rgba(0, 0, 0, 0.53);
+    width: 150px;
+    height: 2500px;
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.a > li {
+    margin: 2px;
+    height: 40px;
+    border: 1px rgba(0, 0, 0, 0.08) solid;
+    line-height: 40px;
+    position: relative;
+    /*display: none;*/
+
+}
+
+.ok {
+    /*background-color: palegreen;*/
+    /*background-image: url(../images/pro_left.png);*/
+    background: url(../images/pro_left.png) no-repeat center center;
+    background-position: right;
+}
+
+
+.b {
+    position: absolute;
+    width: 200px;
+    left: 150px;
+    top: 0px;
+    display: none;
+
+}
+
+.b > li {
+    border: 1px rgba(0, 0, 0, 0.08) solid;
+    position: relative;
+    top: 0;
+    margin: 2px;
+    /*display: none;*/
+
+}
+
+
+.c {
+    position: absolute;
+    width: 200px;
+    left: 200px;
+    top: 0px;
+    display: none;
+
+}
+
+
+.c > li {
+    border: 1px rgba(0, 0, 0, 0.08) solid;
+    margin: 2px;
+}
+
+
+.d {
+    position: absolute;
+    width: 200px;
+    left: 200px;
+    top: 0px;
+    display: none;
+
+}
+
+
+.d > li {
+    border: 1px rgba(0, 0, 0, 0.08) solid;
+    margin: 2px;
+}
+
+.e {
+    position: absolute;
+    width: 200px;
+    left: 200px;
+    top: 0px;
+    display: none;
+
+}
+
+
+.e > li {
+    border: 1px rgba(0, 0, 0, 0.08) solid;
+    margin: 2px;
+}
+
+.f {
+    position: absolute;
+    width: 200px;
+    left: 200px;
+    top: 0px;
+    display: none;
+
+}
+
+
+.f > li {
+    border: 1px rgba(0, 0, 0, 0.08) solid;
+    margin: 2px;
+}
