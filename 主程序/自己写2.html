@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自己写2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+
+    <script src="js/handlebars-v4.7.7.js"></script>
+</head>
+<!--模板语句 注意首行type写法及 给本模板设置 id-->
+<script type="text/x-handlebars-template" id="hd_tpl1">
+    <ul class="a">
+        {{#each this}}
+        <li><a href="#">{{name}}</a>
+            <ul class="b">
+                {{#each children}}
+                <li><a href="#">{{name}}</a>
+                    <ul class="c">
+                        {{# each children}}
+                        <li><a href="#">{{name}}</a>
+                            <ul class="d">
+                                {{# each children}}
+                                <li><a href="#">{{name}}</a>
+                                    <ul class="e">
+                                        {{# each children}}
+                                        <li><a href="#">{{name}}</a>
+                                            <ul class="f">
+                                                {{# each children}}
+                                                <li><a href="#">{{name}}</a></li>
+                                                {{/each}}
+                                            </ul>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{/each}}
+                </li>
+            </ul>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+
+<body>
+<header><h3>高考志愿填报系统</h3></header>
+<div></div>
+
+
+<!--获取数据-->
+<script>
+    $.ajax({
+        type: "get",
+        url: 'json/2.json',
+        dataType: 'json',
+        async: false,
+        success: function (data) {
+            console.log('3333')
+            console.log(data)
+            console.log(typeof (data))
+            for (i in data) {
+                console.log(i)
+            }
+            // console.log(data[1])
+            result = (data)
+            console.log(result)
+
+
+            //创建调用函数
+            var myTpl = Handlebars.compile($('#hd_tpl1').html());
+            //指定页面标签
+            $('div').html(myTpl(result));
+
+        }
+    })
+
+
+</script>
+<script src="js/index3.js"></script>
+</body>
+</bodu>
+</html>
